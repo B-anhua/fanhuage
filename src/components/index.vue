@@ -1,7 +1,7 @@
 <!--  -->
 <template>
   <div class="xh">
-    <el-carousel :interval="2000" type="card" height="350px" >
+    <el-carousel :interval="2000" type="card" height="500px" >
       <el-carousel-item v-for="item in imgList" :key="item">
         <img :src="item">
       </el-carousel-item>
@@ -25,6 +25,7 @@ const imgList = [
 
 
 .xh{
+  text-align: center;
   background-color: rgb(255, 255, 255,0);
   /* background-size:10% */
 }
@@ -32,9 +33,10 @@ const imgList = [
   background-size: 100%,100%;
   /* /* height: 100%; */
   width: 100%; 
+  height:99%; 
   color: #475669;
   opacity: 0.75;
-  line-height: 10px;
+  /* line-height: 10px; */
   margin: 1px;
   text-align: center;
 }

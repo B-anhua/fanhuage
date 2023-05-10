@@ -16,14 +16,22 @@ export const login = (loginData) => {
     data: {...loginData },
   });
 };
+
+//管理员注册
+export const sign = (signData) => {
+  return $http({
+    url: "/sign",
+    method: "post",
+    //请求参数 uname:用户名，upassword：密码
+    data: {...signData },
+  });
+};
 //管理员退出
 export const logout = () => {
   return $http({
     url: "/logout",
     method: "post",
-    headers: {
-      "Content-Type": "application/json",
-    },
+ 
     data: {},
   });
 };
@@ -47,10 +55,6 @@ export const addFlower = (flower) => {
   return $http({
     url: '/addflowers',
     method: 'post',
-
-    headers: {
-      "Content-Type": "application/json",
-    },
     data: {...flower}
   });
 };
@@ -60,9 +64,6 @@ export const deleteGoods = (id) => {
   return $http({
     url: '/deleteGoods',
     method: 'delete',
-    headers: {
-      "Content-Type": "application/json",
-    },
     //fid属性的值
     data:id
   });
@@ -74,9 +75,6 @@ export const updateFlower = (id) => {
   return $http({
     url: '/updateFlower',
     method: 'put',
-    headers: {
-      "Content-Type": "application/json",
-    },
     //fid属性的值
     data:{...id}
   });
@@ -87,9 +85,6 @@ export const getMember = (currentPage, pageSize, query )=> {
   return $http({
     url: "/getMember",
     method: "get",
-    headers: {
-      "Content-Type": "application/json",
-    },
     //请求参数，currentPage:当前页,pageSize:显示条数,query:模糊查询条件
     params: {currentPage,pageSize,query},
   });
@@ -103,10 +98,6 @@ export const addMember = (member) => {
   return $http({
     url: '/addMember',
     method: 'post',
-
-    headers: {
-      "Content-Type": "application/json",
-    },
     data: {...member}
   });
 };
@@ -116,9 +107,6 @@ export const updateMember = (id) => {
   return $http({
     url: '/updateMember',
     method: 'put',
-    headers: {
-      "Content-Type": "application/json",
-    },
     //fid属性的值
     data:{...id}
   });
@@ -130,9 +118,6 @@ export const deleteMember = (id) => {
   return $http({
     url: '/deleteMember',
     method: 'delete',
-    headers: {
-      "Content-Type": "application/json",
-    },
     //id属性的值
     data:id
   });
@@ -144,9 +129,6 @@ export const getOrderOrder = (currentPage, pageSize, query )=> {
   return $http({
     url: "/getOrder",
     method: "get",
-    headers: {
-      "Content-Type": "application/json",
-    },
     params: {currentPage,pageSize,query},
   });
 };
@@ -157,10 +139,6 @@ export const addOrder = (member) => {
   return $http({
     url: '/addOrder',
     method: 'post',
-
-    headers: {
-      "Content-Type": "application/json",
-    },
     data: {...member}
   });
 };
@@ -170,9 +148,6 @@ export const deleteOrder = (id) => {
   return $http({
     url: '/deleteOrder',
     method: 'delete',
-    headers: {
-      "Content-Type": "application/json",
-    },
     //id属性的值
     data:id
   });
@@ -183,10 +158,6 @@ export const updateOrder = (id) => {
   return $http({
     url: '/updateOrder',
     method: 'put',
-    headers: {
-      "Content-Type": "application/json",
-    },
-
     data:{...id}
   });
 };

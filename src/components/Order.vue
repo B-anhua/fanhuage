@@ -122,6 +122,7 @@ onMounted(() => {
 
 <style  scoped>
 #tab {
+    width: 80%;
     margin: 30px;
 }
 

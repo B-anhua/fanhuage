@@ -90,6 +90,15 @@ const logOut = () => {
     animation: am 5s infinite linear;
 }
 
+@keyframes am {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
 .el-menu-vertical-demo {
     background-color: rgb(44, 39, 39, 0.6);
 }

@@ -1,5 +1,6 @@
 <template>
     <div id="tab">
+        <div>
         <div class="toolbar">
             <div class="search">
                 <el-input placeholder="请输入关键字" v-model.trim="page.query"></el-input>
@@ -37,7 +38,7 @@
 
         </div>
 
-
+    </div>
     </div>
 </template>
 
@@ -56,16 +57,8 @@ let page = reactive({
     pageSize: 10,
     total: 10,
 });
-const small = ref(false)
-// const background = ref(false)
-// const disabled=ref(false)
-// let initialData = reactive({
-//     fid: "",
-//     fname: "",
-//     fnum: 0,
-//     fprice: 0,
-//     fstatus: 1,
-// });
+
+
 let isUpdate = false;
 /* const updetaData = (index, row) => {
     isUpdate = true;
@@ -167,7 +160,9 @@ onMounted(() => {
 
 <style  scoped>
 #tab {
-
+    /* display: flex; */
+    /* justify-content: center; */
+    /* width: 100%; */
     margin: 20px 60px;
 }
 
